@@ -98,4 +98,11 @@
             const response = await fetch(`/api/suscripciones/${id}`, { method: 'DELETE' });
             if (response.ok) {
                 alert('Suscripción eliminada');
-           
+                loadSubscriptions();
+            }
+        }
+    }
+
+loadSubscriptions();
+</script>
+@endsection

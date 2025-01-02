@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Suscripcion extends Model
 {
     use HasFactory;
+    protected $table = 'suscripciones';
 
 
     public function usuario()

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class UsuarioController extends Controller
 {
@@ -32,6 +33,7 @@ public function update(Request $request, $id)
     $usuario->update($request->all());
     return response()->json(['message' => 'Usuario actualizado', 'usuario' => $usuario]);
 }
+
 
 public function destroy($id)
 {

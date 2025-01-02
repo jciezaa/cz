@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PlanController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +28,32 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+
+    Route::get('/usuarios', function () {
+        return view('usuarios.index');
+    });
+    
+    Route::put('/usuarios/{usuario}', [UsuarioController::class, 'update'])->name('usuarios.update');
+    Route::put('/usuarios/{usuario}', [UsuarioController::class, 'delete'])->name('usuarios.delete');
+    
+    
+    Route::get('/planes', function () {
+        return view('planes.index');
+    });
+    
+    Route::put('/planes/{plan}', [PlanController::class, 'update'])->name('planes.update');
+    Route::put('/planes/{plan}', [PlanController::class, 'delete'])->name('planes.delete');
+    
+    Route::get('/suscripciones', function () {
+        return view('suscripciones.index');
+    });
+
+
+
+
+
+
 });
 
 require __DIR__.'/auth.php';
@@ -33,14 +61,4 @@ require __DIR__.'/auth.php';
 
 
 
-Route::get('/usuarios', function () {
-    return view('usuarios.index');
-});
 
-Route::get('/planes', function () {
-    return view('planes.index');
-});
-
-Route::get('/suscripciones', function () {
-    return view('suscripciones.index');
-});

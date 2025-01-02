@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('planes', function (Blueprint $table) {
+        Schema::create('plans', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->decimal('precio', 8, 2);

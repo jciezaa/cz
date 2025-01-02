@@ -9,6 +9,9 @@ class Plan extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = ['nombre', 'precio', 'periodicidad'];
+
     public function suscripciones()
 {
     return $this->hasMany(Suscripcion::class);

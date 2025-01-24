@@ -16,6 +16,9 @@ class Usuario extends Model
         return $this->hasMany(Suscripcion::class);
     }
     
-
+    public function pagos()
+    {
+        return $this->hasMany(Pago::class, 'usuario_id');
+    }
 
 }

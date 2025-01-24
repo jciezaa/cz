@@ -9,6 +9,7 @@ class Suscripcion extends Model
 {
     use HasFactory;
     protected $table = 'suscripciones';
+    protected $fillable = ['fecha_inicio', 'fecha_fin', 'estado'];
 
 
     public function usuario()
@@ -20,9 +21,6 @@ public function plan()
 {
     return $this->belongsTo(Plan::class);
 }
-
-
-
 
 
 }

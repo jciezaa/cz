@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     use HasFactory;
+    protected $fillable = ['nombre', 'email', 'metodo_pago'];
 
     public function suscripciones()
     {

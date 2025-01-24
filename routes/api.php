@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\PlanController;
+use App\Http\Controllers\SuscripcionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UsuarioController;
-use App\Http\Controllers\SuscripcionController;
+
 
 /*
 |--------------------------------------------------------------------------

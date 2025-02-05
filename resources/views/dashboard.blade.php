@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Profesional</title>
+    <title>Dashboard CZ Building</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Chart.js para gráficos -->
@@ -22,8 +22,8 @@
             top: 0;
             left: 0;
             width: 250px;
-            padding-top: 56px;
-            background-color: #343a40;
+            padding-top: 20px;
+            background-color: #1A1A1A; /* Azabache */
             color: white;
             transition: width 0.3s;
         }
@@ -41,10 +41,11 @@
             align-items: center;
         }
         .sidebar a:hover {
-            background-color: #495057;
+            background-color: #2E2E2E; /* Azabache más claro al hacer hover */
         }
         .sidebar .fas {
             margin-right: 10px;
+            color: #FFA500; /* Ámbar para íconos */
         }
         .main-content {
             margin-left: 250px;
@@ -59,9 +60,11 @@
             border: none;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
         }
         .card-header {
-            background-color: #fff;
+            background-color: #1A1A1A; /* Azabache */
+            color: #FFA500; /* Texto ámbar */
             border-bottom: none;
             padding: 15px;
             border-radius: 10px 10px 0 0;
@@ -73,28 +76,50 @@
             margin-top: 20px;
         }
         .table thead {
-            background-color: #343a40;
-            color: white;
+            background-color: #1A1A1A; /* Azabache */
+            color: #FFA500; /* Texto ámbar */
         }
         .btn-toggle {
-            background-color: #495057;
+            background-color: #2E2E2E; /* Azabache más claro */
             border: none;
-            color: white;
+            color: #FFA500; /* Ámbar */
             padding: 10px;
             cursor: pointer;
             border-radius: 5px;
         }
         .btn-toggle:hover {
-            background-color: #5a6268;
+            background-color: #3E3E3E; /* Azabache más claro al hacer hover */
+        }
+        .navbar {
+            background-color: #1A1A1A; /* Azabache */
+        }
+        .navbar-brand {
+            color: #FFA500 !important; /* Texto ámbar */
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            margin-right: 10px;
+            height: 30px;
+        }
+        .navbar-nav .nav-link {
+            color: #FFA500 !important; /* Texto ámbar */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #FFD700 !important; /* Ámbar más claro al hacer hover */
         }
     </style>
 </head>
 <body>
 
     <!-- Barra de navegación superior -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Dashboard Profesional</a>
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/150x50?text=CZ+Building" alt="CZ Building Logo"> <!-- Logotipo -->
+                CZ Building
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -208,7 +233,7 @@
                 datasets: [{
                     label: 'Ventas',
                     data: [65, 59, 80, 81, 56, 55],
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderColor: '#FFA500', /* Ámbar */
                     fill: false,
                 }]
             },
@@ -226,8 +251,8 @@
                 datasets: [{
                     label: 'Usuarios',
                     data: [50, 60, 70, 80, 90, 100],
-                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
+                    backgroundColor: '#FFA500', /* Ámbar */
+                    borderColor: '#FFA500', /* Ámbar */
                     borderWidth: 1,
                 }]
             },
@@ -246,21 +271,14 @@
                     label: 'Ingresos',
                     data: [300, 400, 500, 600, 700, 800],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        '#FFA500', /* Ámbar */
+                        '#1A1A1A', /* Azabache */
+                        '#FFD700', /* Ámbar claro */
+                        '#2E2E2E', /* Azabache más claro */
+                        '#FF8C00', /* Ámbar oscuro */
+                        '#3E3E3E' /* Azabache más claro */
                     ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
+                    borderColor: '#1A1A1A', /* Azabache */
                     borderWidth: 1,
                 }]
             },

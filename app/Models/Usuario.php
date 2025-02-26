@@ -9,12 +9,16 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     use HasFactory;
+    protected $fillable = ['nombre', 'email', 'metodo_pago'];
 
     public function suscripciones()
     {
         return $this->hasMany(Suscripcion::class);
     }
     
-
+    public function pagos()
+    {
+        return $this->hasMany(Pago::class, 'usuario_id');
+    }
 
 }

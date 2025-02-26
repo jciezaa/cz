@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuscripcionController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,8 +51,12 @@ Route::middleware('auth')->group(function () {
         return view('suscripciones.index');
     });
 
+    Route::put('/suscripciones/{suscripcion}', [SuscripcionController::class, 'update'])->name('suscripciones.update');
+    Route::put('/suscripciones/{suscripcion}', [SuscripcionController::class, 'delete'])->name('suscripciones.delete');
 
 
+
+    Route::resource('pagos', PagoController::class);
 
 
 
